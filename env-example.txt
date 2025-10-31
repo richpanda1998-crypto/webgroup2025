@@ -1,0 +1,20 @@
+# Database Configuration
+# 复制此文件为 .env.local 并填写您的实际数据库信息
+
+# PostgreSQL Database Host
+DB_HOST=localhost
+
+# PostgreSQL Database Username
+DB_USER=your_username
+
+# PostgreSQL Database Password
+DB_PASSWORD=your_password
+
+# PostgreSQL Database Name
+DB_NAME=your_database_name
+
+# PostgreSQL Database Port (默认5432)
+DB_PORT=5432
+
+# Vercel URL (部署时自动设置，开发时可选)
+# VERCEL_URL=
