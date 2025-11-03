@@ -1,12 +1,12 @@
 import { MetadataRoute } from 'next'
-import { getAllBrokersFromDB } from './actions/brokers'
+import { getAllBrokers } from './actions/brokers'
 import { brokerNameToSlug } from '@/lib/utils'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://zenprofx.com'
   
   // 获取所有经纪商
-  const brokers = await getAllBrokersFromDB()
+  const brokers = await getAllBrokers()
   
   // 生成经纪商详情页 URL
   const brokerUrls = brokers.map((broker) => ({
