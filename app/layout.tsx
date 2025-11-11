@@ -66,8 +66,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Google tag (gtag.js) */}
+      <body className={`font-sans antialiased`}>
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-B8FSBMS5PC"
           strategy="afterInteractive"
@@ -75,13 +75,11 @@ export default function RootLayout({
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);};
+            function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-B8FSBMS5PC');
           `}
         </Script>
-      </head>
-      <body className={`font-sans antialiased`}>
         {children}
       </body>
     </html>
